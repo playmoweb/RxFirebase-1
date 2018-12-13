@@ -186,7 +186,7 @@ public class RxFirestore {
      * @return a Single which emits the {@link DocumentReference} of the added Document.
      */
     @NonNull
-    private static Completable addDocumentOffline(@NonNull final CollectionReference ref,
+    public static Completable addDocumentOffline(@NonNull final CollectionReference ref,
                                                   @NonNull final Map<String, Object> data) {
         return Completable.create(new CompletableOnSubscribe() {
             @Override
@@ -212,7 +212,7 @@ public class RxFirestore {
      * @return a Single which emits the {@link DocumentReference} of the added Document.
      */
     @NonNull
-    private static Completable addDocumentOffline(@NonNull final CollectionReference ref,
+    public static Completable addDocumentOffline(@NonNull final CollectionReference ref,
                                                   @NonNull final Object pojo) {
         return Completable.create(new CompletableOnSubscribe() {
             @Override
